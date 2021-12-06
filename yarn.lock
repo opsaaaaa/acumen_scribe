@@ -3137,6 +3137,13 @@ globby@^6.1.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
+gorko@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/gorko/-/gorko-0.9.0.tgz#a3c9f3bceed4d0e8118aabb90d5c91655ffe2ffc"
+  integrity sha512-VjaDs2uY0ofwC74qsQM5Yo+kOttT29yGhYFtslYgynmCXFsOAvDFqSWl1AV7oV6v/2b1iAX9ak4VCVxqXW+81w==
+  dependencies:
+    sass "^1.26.5"
+
 graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2:
   version "4.2.8"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.8.tgz#e412b8d33f5e006593cbd3cee6df9f2cebbe802a"
@@ -5848,7 +5855,7 @@ sass-loader@10.1.1:
     schema-utils "^3.0.0"
     semver "^7.3.2"
 
-sass@^1.38.0:
+sass@^1.26.5, sass@^1.38.0:
   version "1.44.0"
   resolved "https://registry.yarnpkg.com/sass/-/sass-1.44.0.tgz#619aa0a2275c097f9af5e6b8fe8a95e3056430fb"
   integrity sha512-0hLREbHFXGQqls/K8X+koeP+ogFRPF4ZqetVB19b7Cst9Er8cOR0rc6RU7MaI4W1JmUShd1BPgPoeqmmgMMYFw==
