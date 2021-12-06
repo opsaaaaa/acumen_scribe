@@ -4,11 +4,12 @@
 // that code so it'll be compiled.
 
 import Rails from "@rails/ujs"
-import Turbo from "@hotwired/turbo"
-// import Turbolinks from "turbolinks"
+import { Turbo } from "@hotwired/turbo-rails"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import "stylesheets/styles"
 
+Turbo.session.drive = false
 Rails.start()
 Turbo.start()
 ActiveStorage.start()
