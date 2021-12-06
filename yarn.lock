@@ -4610,6 +4610,11 @@ pako@~1.0.5:
   resolved "https://registry.yarnpkg.com/pako/-/pako-1.0.11.tgz#6c9599d340d54dfd3946380252a35705a6b992bf"
   integrity sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==
 
+palette-printer@^1.0.0-alpha:
+  version "1.0.0-alpha"
+  resolved "https://registry.yarnpkg.com/palette-printer/-/palette-printer-1.0.0-alpha.tgz#c50e8c1ca49b0e2411a1b05619397eb0669000b4"
+  integrity sha512-eb4YaRGeesduiUZFeiuD/zC0xnlq62DZT+YhTZ4fS2eq6PnPK+dx/75MO3h7rD9DpMBc2bAbSndVBQ1183fGvA==
+
 parallel-transform@^1.1.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/parallel-transform/-/parallel-transform-1.2.0.tgz#9049ca37d6cb2182c3b1d2c720be94d14a5814fc"
