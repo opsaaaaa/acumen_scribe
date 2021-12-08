@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Text Notes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Body</th>
+      <th>Order</th>
+      <th>Size</th>
+      <th>Color</th>
+      <th>Board</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @text_notes.each do |text_note| %>
+      <tr>
+        <td><%= text_note.body %></td>
+        <td><%= text_note.order %></td>
+        <td><%= text_note.size %></td>
+        <td><%= text_note.color %></td>
+        <td><%= text_note.board_id %></td>
+        <td><%= link_to 'Show', text_note %></td>
+        <td><%= link_to 'Edit', edit_text_note_path(text_note) %></td>
+        <td><%= link_to 'Destroy', text_note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Text Note', new_text_note_path %>

@@ -64,6 +64,10 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
+    acts-as-taggable-on (8.1.0)
+      activerecord (>= 5.0, < 6.2)
+    awesome_nested_set (3.4.0)
+      activerecord (>= 4.0.0, < 7.0)
     bcrypt (3.1.16)
     better_errors (2.9.1)
       coderay (>= 1.0.0)
@@ -229,6 +233,8 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  acts-as-taggable-on (~> 8.1)
+  awesome_nested_set (~> 3.4)
   better_errors (~> 2.9, >= 2.9.1)
   bootsnap (>= 1.4.4)
   byebug

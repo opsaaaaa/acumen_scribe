@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :text_notes
+  resources :boards
+  resources :branches
+  resources :projects
   devise_for :users
   root to: 'home#index'
   get '/home', to: 'home#index'

@@ -26,6 +26,12 @@ gem 'devise'
 # Decorators
 gem 'draper', '~> 4.0', '>= 4.0.1'
 
+# nested sets for branches
+gem 'awesome_nested_set', '~> 3.4'
+
+# Tags for boards and notes
+gem 'acts-as-taggable-on', '~> 8.1'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

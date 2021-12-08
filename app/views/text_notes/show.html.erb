@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @text_note.body %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @text_note.order %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @text_note.size %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @text_note.color %>
+</p>
+
+<p>
+  <strong>Board:</strong>
+  <%= @text_note.board_id %>
+</p>
+
+<%= link_to 'Edit', edit_text_note_path(@text_note) %> |
+<%= link_to 'Back', text_notes_path %>
