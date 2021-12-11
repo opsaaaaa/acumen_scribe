@@ -32,6 +32,7 @@ gem 'awesome_nested_set', '~> 3.4'
 # Tags for boards and notes
 gem 'acts-as-taggable-on', '~> 8.1'
 
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -49,6 +50,8 @@ group :development, :test do
   gem 'pry', '~> 0.14.1'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Factories 
+  gem 'factory_girl_rails', '~> 4.9'
 end
 
 group :development do
