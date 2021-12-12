@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 2021_12_12_184728) do
     t.string "name"
     t.bigint "project_id", null: false
     t.integer "parent_id"
-    t.integer "lft", null: false
-    t.integer "rgt", null: false
+    t.integer "lft"
+    t.integer "rgt"
     t.integer "depth", default: 0, null: false
     t.integer "children_count", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
