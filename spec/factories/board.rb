@@ -1,5 +1,5 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :board do
-    title "Board Title"
+    title {"Board Title"}
   end
 end

@@ -51,10 +51,8 @@ ActiveRecord::Schema.define(version: 2021_12_12_184728) do
 
   create_table "projects", force: :cascade do |t|
     t.string "title"
-    t.bigint "owner_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["owner_id"], name: "index_projects_on_owner_id"
   end
 
   create_table "taggings", id: :serial, force: :cascade do |t|
@@ -109,7 +107,7 @@ ActiveRecord::Schema.define(version: 2021_12_12_184728) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "name"
+    t.string "name", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -118,7 +116,6 @@ ActiveRecord::Schema.define(version: 2021_12_12_184728) do
   add_foreign_key "branches", "projects"
   add_foreign_key "project_accesses", "projects"
   add_foreign_key "project_accesses", "users"
-  add_foreign_key "projects", "users", column: "owner_id"
   add_foreign_key "taggings", "tags"
   add_foreign_key "text_notes", "boards"
 end

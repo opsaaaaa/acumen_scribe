@@ -1,6 +1,6 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :branch do
-    name "Board Title"
-    
+    name {"Board Title"}
+
   end
 end
