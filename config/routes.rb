@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :project_accesses
   resources :text_notes
   resources :boards
   resources :branches

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @project_access.user_id %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @project_access.project_id %>
+</p>
+
+<p>
+  <strong>Access:</strong>
+  <%= @project_access.access %>
+</p>
+
+<%= link_to 'Edit', edit_project_access_path(@project_access) %> |
+<%= link_to 'Back', project_accesses_path %>
