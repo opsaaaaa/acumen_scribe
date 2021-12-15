@@ -1,4 +1,4 @@
-class TextNotesController < ApplicationController
+class TextNotesController < BackendController
   before_action :set_text_note, only: %i[ show edit update destroy ]
 
   # GET /text_notes or /text_notes.json

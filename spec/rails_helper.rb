@@ -1,11 +1,21 @@
-# This file is copied to spec/ when you run 'rails generate rspec:install'
-require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../config/environment', __dir__)
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
+
+
+require 'faker'
+require 'factory_bot_rails'
+require 'devise'
+
+require 'require_all'
+require_all 'spec/support'
+require 'spec_helper'
+
+puts('i running')
+# $stdout.puts("thing")
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
@@ -24,6 +34,20 @@ require 'rspec/rails'
 
 # Checks for pending migrations and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove these lines.
+
+# module Devise
+#   module Test
+#     module ControllerHelpers
+#       included do
+#         setup :setup_controller_for_warden, :warden
+#       end
+#       def setup_controller_for_warden #:nodoc:
+#         request.env['action_controller.instance'] = @controller
+#       end
+#     end
+#   end
+# end
+
 begin
   ActiveRecord::Migration.maintain_test_schema!
 rescue ActiveRecord::PendingMigrationError => e
@@ -31,6 +55,16 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 RSpec.configure do |config|
+  # config.include TestSupport::Requests, type: :request
+  # config.infer_spec_type_from_file_location!
+  config.include FactoryBot::Syntax::Methods
+  config.include Devise::Test::IntegrationHelpers, type: :request
+  # config.include Devise::Test::ControllerHelpers, type: :controller
+  # config.include Warden::Test::Helpers   
+  # Devise::Test::ControllerHelpers.request
+  # config.include Devise::Test::RequestHelpers, type: :request
+  # config.include Devise::TestHelpers, type: :controller
+  # config.include Warden::Test::Helpers, type: :request
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 

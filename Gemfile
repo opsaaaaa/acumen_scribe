@@ -21,7 +21,7 @@ gem 'jbuilder', '~> 2.7'
 
 
 # User Authentication
-gem 'devise'
+gem 'devise', '~> 4.8'
 
 # Decorators
 gem 'draper', '~> 4.0', '>= 4.0.1'
@@ -43,6 +43,8 @@ gem 'acts-as-taggable-on', '~> 8.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
+
+gem 'require_all', '~> 3.0'
 
 group :development, :test do
   gem 'rspec-rails', '~> 4.0.0'

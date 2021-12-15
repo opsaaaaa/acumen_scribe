@@ -113,7 +113,7 @@ GEM
     listen (3.7.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    loofah (2.12.0)
+    loofah (2.13.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -121,7 +121,7 @@ GEM
     marcel (1.0.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
-    minitest (5.14.4)
+    minitest (5.15.0)
     msgpack (1.4.2)
     nio4r (2.5.8)
     nokogiri (1.12.5-x86_64-linux)
@@ -173,6 +173,7 @@ GEM
       ffi (~> 1.0)
     request_store (1.5.0)
       rack (>= 1.4)
+    require_all (3.0.0)
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -245,7 +246,7 @@ DEPENDENCIES
   better_errors (~> 2.9, >= 2.9.1)
   bootsnap (>= 1.4.4)
   byebug
-  devise
+  devise (~> 4.8)
   draper (~> 4.0, >= 4.0.1)
   factory_bot_rails (~> 6.2)
   faker (~> 2.19)
@@ -256,6 +257,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1, >= 6.1.4.1)
+  require_all (~> 3.0)
   rspec-rails (~> 4.0.0)
   sass-rails (>= 6)
   spring

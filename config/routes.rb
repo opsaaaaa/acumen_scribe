@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+
+  authenticate :user do
+    resources :text_notes
+  end
   resources :project_accesses
-  resources :text_notes
   resources :boards
   resources :branches
   resources :projects
