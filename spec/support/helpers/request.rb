@@ -14,6 +14,6 @@ module Support
   end  
 end
 
-RSpec.configure do |config|
-    config.include Support::Test::Request, :type => :request
-end
+# RSpec.configure do |config|
+#   config.include Support::Test::Request, :type => :request
+# end
