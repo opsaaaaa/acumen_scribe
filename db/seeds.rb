@@ -20,4 +20,24 @@ user = User.create(
 user.save!
 admin.save!
 
+project = Project.create(
+  title: 'Initial Project'
+)
+main_board = Board.create(
+  title: 'Main Board'
+)
+
+root_branch = Branch.create!(
+  name: 'root',
+  project: project, 
+  board: Board.create!(title: 'project')
+)
+sub_branch = Branch.create!(
+  name: 'Quick Notes',
+  project: project,
+  board: Board.create!(title: 'quick Notes')
+)
+sub_branch.move_to_child_of(root_branch)
+
+
 

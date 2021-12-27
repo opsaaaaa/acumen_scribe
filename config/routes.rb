@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   resources :branches
   resources :projects
   devise_for :users
+
+  get '/dashboard', to: 'project_dashboard#index', as: 'dashboard'
+
   root to: 'home#index'
   get '/home', to: 'home#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
