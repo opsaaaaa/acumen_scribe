@@ -60,8 +60,20 @@ body
 .pos-lb
     bottom: 0
     left: 0
-.h-full
-    height: 100vh
+
+.pos-r
+    right: 0
+    bottom: 0
+    top: 0
+
+.open-slide-right
+    transition: right 300ms ease-in-out
+
+.open-slide-right[closed]
+    right: -100%
+.open-slide-right[open]
+    right: 0%
+
 
 .dl-split
     display: grid

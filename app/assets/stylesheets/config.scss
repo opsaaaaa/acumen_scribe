@@ -181,16 +181,18 @@ $gorko-config: (
   ),
   'h': (
     'items': (
-      'full': '100%'
+      'full': '100%',
+      'screen': '100vh'
     ),
     'output': 'responsive',
-    'property': 'width'
+    'property': 'height'
   ),
   'w': (
     'items': (
       'full': '100%',
       'half': '50%',
-      '2p': '30em'
+      '2p': '30em',
+      'screen': '100vw'
     ),
     'output': 'responsive',
     'property': 'width'
