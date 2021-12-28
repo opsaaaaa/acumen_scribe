@@ -1,52 +1,76 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>AcumenScribe</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>AcumenScribe</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_pack_tag "application" %>
-    <%= javascript_pack_tag 'application', 'data-turbo-track': 'reload' %>
-    
-  </head>
+  <%= stylesheet_pack_tag "application" %>
+  <%= javascript_pack_tag 'application', 'data-turbo-track': 'reload' %>
+  
+</head>
 
-  <body>
+<body>
+
+  <div class="project-dashboard-layout">
 
     <div class="
-        [ grid-rows grid-temp:auto-1fr fill-screen ]
-        [ m-200 g-200 ]
+      [ grid-rows grid-temp:auto-1fr fill-screen ]
+      [ p-200 g-200 ]
       ">
-      <header class="[ dl-header pannel ]">
-        <h1>header</h1>      
-      </header>
 
-     <div class="
+
+      <div class="[ dl-header ]">
+        <header class="pannel">
+          <h1>header</h1>
+        </header>
+      </div>
+       
+      <div class="
         [ grid-columns grid-temp:1p-1fr ]
         [ g-200 ]
-      ">
-       
-       <div class="branch-tree dl-side pannel">
-       </div>
-       
-       <div class="board-page dl-center pannel">
-         <main>
-           <%= yield %>
-         </main>
-       </div>
-       
-       
-       <aside class="reference-tab dl-tab pannel">
-       </aside>
-       
-       <div class="context-menu dl-context pannel">
-       <div>
-       <div class="alerts pannel">
-         <p class="notice"><%= notice %></p>
-         <p class="alert"><%= alert %></p>
-       </div>
-     </div>     
-      
+        ">
+    
+        <div class="branch-tree dl-side pannel">
+    
+        </div>
+    
+        <div class="board-page dl-center pannel">
+        <main>
+          <%= yield %>
+        </main>
+        </div>
+    
+    
+      </div>
+    
     </div>
-  </body>
+
+    <div class="[ fixed-gui ][ pos-fixed ]">
+      <div class="[ w-full h-full pos-relative ]">
+
+        <aside class="reference-tab dl-tab pannel">
+        </aside>
+          
+        <div class="context-menu dl-context pannel">
+        </div>
+        
+        <div class="pos-absolute pos-lb w-full">
+          
+          <div class="
+              [ grid-rows g-300 ]
+              [ m-300 sm:m-900 lg:w-2p ]
+            ">
+            <p class="notice notice-scribe p-300 pannel ">Notice<%= notice %></p>
+            <p class="alert alert-scribe p-300 pannel">Alert<%= alert %></p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+
+
+  </div>
+</body>
 </html>

@@ -1,13 +1,17 @@
 
-@use "palette-printer" as p with (
+@forward "palette-printer" with (
     $palettes: (
         'light': (
             'bg-main': #fff, 
             'text-main': #000,
             'bg-button': rgb(90, 46, 119),
-            'text-button': #fff
+            'text-button': #fff,
+            'alert-scribe': red, 
+            'notice-scribe': blue, 
         ),
         'dark': (
+            'alert-scribe': red, 
+            'notice-scribe': blue, 
             'bg-main': #000, 
             'text-main': #fff,
             'bg-button': rgb(93, 206, 145),
@@ -24,7 +28,11 @@
     ),
     $tokens: (
         'background': ('bg-main': 'bg-main'),
-        'color': ('text-main': 'text-main')
+        'color': (
+          'text-main': 'text-main',
+          'alert-scribe': 'alert-scribe',
+          'notice-scribe': 'notice-scribe',
+        )
     ),
     $theme-tag: 'html'
 );
@@ -98,7 +106,7 @@ $gorko-config: (
   ),
   'm': (
     'items': $gorko-size-scale,
-    'output': 'standard',
+    'output': 'responsive',
     'property': 'margin'
   ),
   'mt': (
@@ -171,12 +179,18 @@ $gorko-config: (
     'output': 'standard',
     'property': 'font-weight'
   ),
-  'width': (
+  'h': (
+    'items': (
+      'full': '100%'
+    ),
+    'output': 'responsive',
+    'property': 'width'
+  ),
+  'w': (
     'items': (
       'full': '100%',
       'half': '50%',
-      'quarter': '25%',
-      'third': '33.33%'
+      '2p': '30em'
     ),
     'output': 'responsive',
     'property': 'width'
