@@ -43,6 +43,7 @@ $gorko-base-size: 1rem;
 /// your whole project.
 ///
 $gorko-size-scale: (
+  '200': $gorko-base-size * 0.4,
   '300': $gorko-base-size * 0.8,
   '400': $gorko-base-size,
   '500': $gorko-base-size * 1.25,
@@ -90,42 +91,57 @@ $gorko-config: (
     'output': 'standard',
     'property': 'font-family'
   ),
-  'gap-top': (
+  'g': (
+    'items': $gorko-size-scale,
+    'output': 'standard',
+    'property': 'gap'
+  ),
+  'm': (
+    'items': $gorko-size-scale,
+    'output': 'standard',
+    'property': 'margin'
+  ),
+  'mt': (
     'items': $gorko-size-scale,
     'output': 'standard',
     'property': 'margin-top'
   ),
-  'gap-right': (
+  'mr': (
     'items': $gorko-size-scale,
     'output': 'standard',
     'property': 'margin-right'
   ),
-  'gap-bottom': (
+  'mb': (
     'items': $gorko-size-scale,
     'output': 'standard',
     'property': 'margin-bottom'
   ),
-  'gap-left': (
+  'ml': (
     'items': $gorko-size-scale,
     'output': 'standard',
     'property': 'margin-left'
   ),
-  'pad-top': (
+  'p': (
+    'items': $gorko-size-scale,
+    'output': 'standard',
+    'property': 'padding'
+  ),
+  'pt': (
     'items': $gorko-size-scale,
     'output': 'standard',
     'property': 'padding-top'
   ),
-  'pad-right': (
+  'pr': (
     'items': $gorko-size-scale,
     'output': 'standard',
     'property': 'padding-right'
   ),
-  'pad-bottom': (
+  'pb': (
     'items': $gorko-size-scale,
     'output': 'standard',
     'property': 'padding-bottom'
   ),
-  'pad-left': (
+  'pl': (
     'items': $gorko-size-scale,
     'output': 'standard',
     'property': 'padding-left'
