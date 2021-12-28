@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>AcumenScribe</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
-
-  <%= stylesheet_pack_tag "application" %>
-  <%= javascript_pack_tag 'application', 'data-turbo-track': 'reload' %>
-  
-</head>
+<%= render partial: 'layouts/head' %>
 
 <body>
 
@@ -22,7 +13,7 @@
 
 
       <div class="[ dl-header ]">
-        <header class="pannel">
+        <header class="panel panel-fill">
           <h1>header</h1>
         </header>
       </div>
@@ -32,11 +23,11 @@
         [ g-200 ]
         ">
     
-        <div class="branch-tree dl-side pannel">
+        <div class="branch-tree dl-side panel panel-fill">
     
         </div>
     
-        <div class="board-page dl-center pannel">
+        <div class="board-page dl-center panel panel-fill">
         <main>
           <%= yield %>
         </main>
@@ -52,15 +43,15 @@
 
         <div class="
             [ pos-absolute pos-r ]
-            [ pt-200 pb-200 pl-200 ]
+            [ pt-300 pb-300 pl-300 ]
             [ w-full lg:w-2p ]
           ">
           <aside open class="
             [ w-full h-full ]
             [ pos-relative open-slide-right ]">
 
-            <div class="red pannel h-full">
-            
+            <div class="red panel h-full shadow border">
+              Aside Content Search and stuff
             </div>
           
           </aside>
@@ -68,7 +59,7 @@
           
         <div class="
           context-menu 
-          dl-context pannel">
+          dl-context panel panel-fill">
         
         
         </div>
@@ -79,8 +70,8 @@
               [ grid-rows g-300 ]
               [ m-300 sm:m-900 lg:w-2p ]
             ">
-            <p class="notice notice-scribe p-300 pannel ">Notice<%= notice %></p>
-            <p class="alert alert-scribe p-300 pannel">Alert<%= alert %></p>
+            <p class="body-fill notice notice-scribe p-300 panel ">Notice<%= notice %></p>
+            <p class="body-fill alert alert-scribe p-300 panel">Alert<%= alert %></p>
           </div>
         </div>
       

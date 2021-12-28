@@ -10,7 +10,6 @@
 
 body
     overflow-x: hidden
-    background-color: #ccc
 
 .grid-temp\:auto-1fr
     --grid-temp: auto
@@ -39,15 +38,16 @@ body
     height: auto
     min-height: 100vh
 
-.pannel
+.panel
+    padding: get-size('300')
     border-radius: .3em
     min-width: 1em
     min-height: 1em
-    background-color: #eee 
     pointer-events: auto
+    background-color: p.palette('background')
 
-.red
-    background-color: red
+.shadow
+    box-shadow: 0 0 30px -8px p.palette('background-body')
 
 .fixed-gui
     position: fixed
@@ -77,6 +77,9 @@ body
 
 .dl-split
     display: grid
+
+.border
+    border: 1px solid p.palette('border')
 
 .alert
     border: 1px solid p.palette('alert-scribe')

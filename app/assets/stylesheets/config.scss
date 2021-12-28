@@ -8,14 +8,20 @@
             'text-button': #fff,
             'alert-scribe': red, 
             'notice-scribe': blue, 
+            'background-body': #ccc,
+            'background': #eee,
+            'boarder': #888,
         ),
         'dark': (
             'alert-scribe': red, 
-            'notice-scribe': blue, 
+            'notice-scribe': rgb(63, 130, 255), 
             'bg-main': #000, 
             'text-main': #fff,
             'bg-button': rgb(93, 206, 145),
-            'text-button': #000
+            'text-button': #000,
+            'background-body': rgb(0, 0, 0),
+            'background': rgb(29, 29, 44),
+            'boarder': #888,
         )
     ),
     $default: 'light',
@@ -27,14 +33,17 @@
         '[theme=light]': 'light' 
     ),
     $tokens: (
-        'background': ('bg-main': 'bg-main'),
+        'background': (
+          'body-fill': 'background-body',
+          'panel-fill': 'background',
+        ),
         'color': (
           'text-main': 'text-main',
           'alert-scribe': 'alert-scribe',
           'notice-scribe': 'notice-scribe',
         )
     ),
-    $theme-tag: 'html'
+    $theme-tag: ':root'
 );
 
 /// BASE SIZE
