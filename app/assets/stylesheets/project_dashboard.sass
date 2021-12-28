@@ -1,0 +1,66 @@
+// Place all the styles related to the project_dashboard controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+\*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    overflow-x: hidden
+    background-color: #ccc
+
+.grid-temp\:auto-1fr
+    --grid-temp: auto
+    --grid-auto: 1fr
+
+.grid-temp\:1p-1fr
+    --grid-temp: 18em
+    --grid-auto: 1fr
+
+.grid-rows
+    display: grid
+    grid-auto-flow: row
+    grid-template-rows: var(--grid-temp, inital)
+    grid-auto-rows: var(--grid-auto, inherit)
+
+.grid-columns
+    display: grid
+    grid-auto-flow: column
+    grid-template-columns: var(--grid-temp, inherit)
+    grid-auto-columns: var(--grid-auto, inherit)
+
+
+
+.fill-screen
+    width: 100vw
+    height: auto
+    min-height: 100vh
+    // gap: .5em
+    // padding: .5em
+
+
+    // grid-template-rows: auto 1fr
+    // grid-template-columns: 18em 1fr
+
+.pannel
+    border-radius: .3em
+    min-width: 1em
+    min-height: 1em
+    background-color: #eee 
+
+
+
+.dl-split
+    display: grid
+
+
+.dl-tab
+    position: fixed
+    height: 100vh
+    padding: 0
+    margin: 0
+    background-color: red
+    top: 0
+    right: 0

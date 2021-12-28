@@ -62,6 +62,17 @@ $gorko-colors: ();
 /// to enabling/disabling pre-built components/utilities.
 ///
 $gorko-config: (
+  'pos': (
+    'items': (
+      'static': 'static',
+      'relative': 'relative',
+      'fixed': 'fixed',
+      'absolute': 'absolute',
+      'sticky': 'sticky'
+    ),
+    'output': 'standard',
+    'property': 'position'
+  ),
   'box': (
     'items': (
       'block': 'block',

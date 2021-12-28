@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AcumenScribe</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_pack_tag "application" %>
+    <%= javascript_pack_tag 'application', 'data-turbo-track': 'reload' %>
+    
+  </head>
+
+  <body>
+
+    <div class="grid-rows grid-temp:auto-1fr fill-screen">
+      <header class="dl-header pannel">
+        <h1>header</h1>      
+      </header>
+
+     <div class="grid-columns grid-temp:1p-1fr">
+       
+       <div class="branch-tree dl-side pannel">
+       </div>
+       
+       <div class="board-page dl-center pannel">
+         <main>
+           <%= yield %>
+         </main>
+       </div>
+       
+       
+       <aside class="reference-tab dl-tab pannel">
+       </aside>
+       <div class="context-menu dl-context pannel">
+       <div>
+       <div class="alerts pannel">
+         <p class="notice"><%= notice %></p>
+         <p class="alert"><%= alert %></p>
+       </div>
+     </div>     
+      
+    </div>
+  </body>
+</html>
