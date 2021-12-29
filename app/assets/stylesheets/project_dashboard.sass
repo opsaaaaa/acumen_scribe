@@ -19,6 +19,10 @@ body
     --grid-temp: 18em
     --grid-auto: 1fr
 
+.grid-temp\:auto
+    --grid-temp: initial
+    --grid-auto: auto
+
 .grid-rows
     display: grid
     grid-auto-flow: row
@@ -30,6 +34,9 @@ body
     grid-auto-flow: column
     grid-template-columns: var(--grid-temp, inherit)
     grid-auto-columns: var(--grid-auto, inherit)
+
+.justify-space-between
+    justify-content: space-between
 
 
 

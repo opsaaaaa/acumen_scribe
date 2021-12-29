@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   resources :projects
   devise_for :users
 
-  get '/dashboard', to: 'project_dashboard#index', as: 'dashboard'
+  get '/dashboard/:id', to: 'project_dashboard#root', as: 'dashboard_root'
+  get '/dashboard/:id/branch/:branch_id', to: 'project_dashboard#branch', as: 'dashboard_branch'
 
   root to: 'home#index'
   get '/home', to: 'home#index'

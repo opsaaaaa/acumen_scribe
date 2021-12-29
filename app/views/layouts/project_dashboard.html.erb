@@ -13,9 +13,7 @@
 
 
       <div class="[ dl-header ]">
-        <header class="panel panel-fill">
-          <p>header</p>
-        </header>
+        <%= render partial: "header", locals: { title: @project.title } %>
       </div>
        
       <div class="
@@ -24,7 +22,14 @@
         ">
     
         <div class="branch-tree dl-side panel panel-fill">
-    
+         <menu class="p-600">
+           
+           <ul>
+             <% @branches.each do |branch| %>
+               <li><%= link_to branch.name, dashboard_branch_path(@project.id, branch.id ) %></li>
+             <% end %>
+           </ul>
+         </menu>
         </div>
     
         <div class="board-page dl-center panel panel-fill">

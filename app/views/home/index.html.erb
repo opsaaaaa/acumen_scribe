@@ -1,4 +1,8 @@
 <div class="div">
     <h1>Home Page</h1>
-    <%= link_to "dashboards", dashboard_path %>
+
+    <h3>Dashboards</h3>
+    <% @projects.each do |project| %>
+        <%= link_to project.title, dashboard_root_path( project.id ) %>
+    <% end %>
 </div>
