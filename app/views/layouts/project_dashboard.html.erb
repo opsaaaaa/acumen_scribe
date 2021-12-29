@@ -14,7 +14,7 @@
 
       <div class="[ dl-header ]">
         <header class="panel panel-fill">
-          <h1>header</h1>
+          <p>header</p>
         </header>
       </div>
        
@@ -38,45 +38,7 @@
     
     </div>
 
-    <div class="[ fixed-gui ][ pos-fixed ]">
-      <div class="[ w-full h-full pos-relative ]">
-
-        <div class="
-            [ pos-absolute pos-r ]
-            [ pt-300 pb-300 pl-300 ]
-            [ w-full lg:w-2p ]
-          ">
-          <aside open class="
-            [ w-full h-full ]
-            [ pos-relative open-slide-right ]">
-
-            <div class="red panel h-full shadow border">
-              Aside Content Search and stuff
-            </div>
-          
-          </aside>
-        </div>
-          
-        <div class="
-          context-menu 
-          dl-context panel panel-fill">
-        
-        
-        </div>
-        
-
-        <div class="pos-absolute pos-lb w-full">  
-          <div class="
-              [ grid-rows g-300 ]
-              [ m-300 sm:m-900 lg:w-2p ]
-            ">
-            <p class="body-fill notice notice-scribe p-300 panel ">Notice<%= notice %></p>
-            <p class="body-fill alert alert-scribe p-300 panel">Alert<%= alert %></p>
-          </div>
-        </div>
-      
-      </div>
-    </div>
+    <%= render partial: 'layouts/gui_overlay' %>
 
 
   </div>
