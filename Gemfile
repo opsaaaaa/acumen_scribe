@@ -48,7 +48,7 @@ gem 'require_all', '~> 3.0'
 
 group :development, :test do
   # Testing
-  gem 'cucumber-rails', '~> 2.4'
+  gem 'cucumber-rails', '~> 2.4', require: false
   gem 'database_cleaner'
   
   gem 'rspec-rails', '~> 4.0.0'
